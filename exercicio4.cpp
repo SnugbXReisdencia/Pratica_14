@@ -8,6 +8,24 @@ struct Calculadora {
     double y;
 };
 
+void pedir_valor(Calculadora& calculadora);
+double calcula_divisao(Calculadora& calculadora);
+
+int main() {
+    Calculadora calculadora;
+
+    double resultado_divisao = calcula_divisao(calculadora);
+
+    if(resultado_divisao == -1){
+        cout << "Não é possível dividir por zero" << endl;
+    }else{
+        cout << resultado_divisao << endl;
+    }
+
+    return 0;
+}
+
+
 void pedir_valor(Calculadora& calculadora){
     cout << "Digite o valor de X: " << endl;
     cin >> calculadora.x;
@@ -30,17 +48,4 @@ double calcula_divisao(Calculadora& calculadora){
     double divisao = calculadora.x / calculadora.y;
 
     return divisao;
-}
-int main() {
-    Calculadora calculadora;
-
-    double resultado_divisao = calcula_divisao(calculadora);
-
-    if(resultado_divisao == -1){
-        cout << "Não é possível dividir por zero" << endl;
-    }else{
-        cout << resultado_divisao << endl;
-    }
-
-    return 0;
 }
