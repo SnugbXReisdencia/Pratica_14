@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "compile C++",
+		"type": "shell",
+		"command": "g++",
+		"args": [
+			"-g",
+			"${fileDirname}/main.cpp",
+			// "${fileDirname}/src/*.cpp",
+			"${fileDirname}/src/model/*.cpp",
+			// "${fileDirname}/src/controller/*.cpp",
+			"${fileDirname}/src/view/*.cpp",
+			"${fileDirname}/src/utils/*.cpp",
+			"-I${fileDirname}/src/headerFiles",
+			"-o",
+			"${fileDirname}/output/main"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"presentation": {
+		  "reveal": "silent"
+		}
+	  }
+	]
+  }
+  
