@@ -13,20 +13,51 @@ struct Calculadora {
     double static calcula_Soma(double , double);
 };
 
+int menu();
+
 void pause();
 void limpaTela();
-
 
 int main(){
     
     int opc;
+    Calculadora c;
     do{
         limpaTela();
-
-        
-
-        
-        pause();
+        opc = menu();
+        switch (opc)
+        {
+        case 1:
+            limpaTela();
+            cout << "************* Potencia *************" << endl;
+            cout << "Insira o valor da base: ";
+            cin >> c.x;
+            cout << "Insira o valor do expoente: ";
+            cin >> c.y;
+            cout << "O resultado é: " << Calculadora::calcula_Potencia(c.x, c.y) << endl;
+            pause();
+            break;
+        case 2:
+            limpaTela();
+            cout << "************* Soma *************" << endl;
+            cout << "Insira o valor 1: ";
+            cin >> c.x;
+            cout << "Insira o valor 2: ";
+            cin >> c.y;
+            cout << "O resultado é: " << Calculadora::calcula_Soma(c.x, c.y) << endl;
+            pause();
+            break;
+        case 0:
+            limpaTela();
+            cout << "Saindo..." << endl;
+            pause();
+            break;
+        default:
+            limpaTela();
+            cout << "Opção invalida!" << endl;
+            cout << "Por favor, escolha uma opção entre 1 e 2." << endl;
+            pause();
+        }        
     }while(opc != 0);
     return 0;
 }
@@ -64,4 +95,15 @@ double Calculadora::calcula_Potencia(double valor, double p){
 
 double Calculadora::calcula_Soma(double valor, double valor2){
     return valor + valor2;
+}
+
+int menu(){
+    int op;
+    cout << "############  Calculadora   ############\n";
+    cout << "1 - Potencia\n";
+    cout << "2 - Soma\n";
+    cout << "0 - Sair\n";
+    cout << "Escolha uma opcao: ";
+    cin >> op;
+    return op;
 }
