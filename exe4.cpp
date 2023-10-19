@@ -11,6 +11,7 @@ struct Calculadora {
 
     double static calcula_Potencia(double, double);
     double static calcula_Soma(double , double);
+    double static calcula_divisao(double , double);
 };
 
 int menu();
@@ -45,6 +46,16 @@ int main(){
             cout << "Insira o valor 2: ";
             cin >> c.y;
             cout << "O resultado é: " << Calculadora::calcula_Soma(c.x, c.y) << endl;
+            pause();
+            break;
+        case 3:
+            limpaTela();
+            cout << "************* Divisao *************" << endl;
+            cout << "Insira o valor 1: ";
+            cin >> c.x;
+            cout << "Insira o valor 2: ";
+            cin >> c.y;
+            cout << "O resultado é: " << Calculadora::calcula_divisao(c.x, c.y) << endl;
             pause();
             break;
         case 0:
@@ -97,11 +108,24 @@ double Calculadora::calcula_Soma(double valor, double valor2){
     return valor + valor2;
 }
 
+double Calculadora::calcula_divisao(double valor_x, double valor_y){
+
+    if(valor_x == 0.0){
+        return 0.0;
+    }else if(valor_y == 0.0){
+        return -1;
+
+    }
+
+    return valor_x / valor_y;
+}
+
 int menu(){
     int op;
     cout << "############  Calculadora   ############\n";
     cout << "1 - Potencia\n";
     cout << "2 - Soma\n";
+    cout << "3 - Divisao\n";
     cout << "0 - Sair\n";
     cout << "Escolha uma opcao: ";
     cin >> op;
