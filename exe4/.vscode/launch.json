@@ -29,8 +29,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/everlan/Residencia_ATTS/Pratica_14/exe4",
-      "program": "/home/everlan/Residencia_ATTS/Pratica_14/exe4/build/Debug/outDebug",
+      "cwd": "/home/everlan-santos-rosario/Área de Trabalho/MyProjetsResidencia/Pratica_14/exe4",
+      "program": "/home/everlan-santos-rosario/Área de Trabalho/MyProjetsResidencia/Pratica_14/exe4/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
