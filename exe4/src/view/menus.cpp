@@ -26,3 +26,29 @@ int menu_Motor(){
     }while(opc < 0 || opc > 4);
     return opc;
 }
+
+int menu_altera_Motor(){
+    int opc;
+    do{
+        vector<string> str = {"############  Alterar Motor   ############",
+        " 1 = Alterar Nome",
+        " 2 = Alterar Fabricante",
+        " 3 = Alterar Modelo",
+        " 4 = Alterar Tipo",
+        " 5 = Alterar Ano",
+        " 6 = Alterar Potência",
+        " 7 = Alterar Número de Marchas",
+        " 8 = Alterar Velocidade Máxima",
+        " 9 = Alterar Consumo de Combustível",
+        " 0 = Voltar ao Menu Principal",
+        };
+        opc = geraMenus(str, 10);
+        if(opc < 0 || opc > 9){
+            cout << "Opção invalida!" << endl;
+            cout << "Por favor, escolha uma opção entre 0 e 9." << endl;
+            pause();
+            limpaTela();
+        }
+    }while(opc < 0 || opc > 9);
+    return opc;
+}

@@ -3,6 +3,7 @@
 #include <string>
 
 #include "../headerFile/_Class_Motor.h"
+#include "../headerFile/utils.h"
 
 using namespace std;
 
@@ -165,4 +166,18 @@ void listarMotor(vector<Motor> motores){
         cout << m.toString() << endl;
         cout << "------------------------------------------------------------" << endl;
     }
+}
+
+void alteraMotor(vector<Motor> motores, int opc){
+    int opcao;
+    cout << "\n############  Alterar Motor  ############" << endl;
+    listarMotor(motores);
+    cout << "Escolha o motor que deseja alterar: ";
+    cin >> opcao;
+    if (opcao > 0 && opcao <= int(motores.size())){
+        
+                
+    }
+    
+
 }

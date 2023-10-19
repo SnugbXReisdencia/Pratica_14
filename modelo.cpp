@@ -10,18 +10,15 @@ void limpaTela();
 
 int main(){
     
-    char sn;
+    int opc;
     do{
         limpaTela();
 
         
 
-        cout << "Deseja continuar (S/N)? ";
-        cin >> sn;
-
-    }while(sn != 'N' && sn != 'n');
-
-    pause();
+        
+        pause();
+    }while(opc != 0);
     return 0;
 }
 
