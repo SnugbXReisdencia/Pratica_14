@@ -135,4 +135,4 @@ void informacoes_manuntencao(Carro& car) {
         "\nDescricao: " << car.manutencao[i].descricao <<
         "\nCusto: " << car.manutencao[i].custo << endl;
         }
-}
+} 
