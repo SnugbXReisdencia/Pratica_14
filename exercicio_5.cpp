@@ -20,6 +20,7 @@ struct Proprietario{
         string getEmail();
         char getSexo();
         // void adquirirCarro(Carro carro);
+        // vector<Carro> getCarros();
 };
 
 Proprietario::Proprietario(){
@@ -58,4 +59,9 @@ char Proprietario::getSexo(){
 void Proprietario::adquirirCarro(Carro carro){
     this->Carros.push_back(carro);
 }
+
+vector<Carro> Proprietario::getCarros(){
+    return this->carros;
+}
+
 */
