@@ -1,43 +1,48 @@
-# include <iostream>
-
+#include <iostream>
 using namespace std;
 
-struct Motor {
+struct Pneu {
+    int largura;
+    int altura;
+    string aro;
     string tipo;
-    double potencia;
-    double consumo_combustivel; // consumo em litros por quilometro
+    double pressao;
 
-
-    void ligar() {
-       cout << "Ligando motor" << endl;
-       cout << " Motor ligado" << endl;
-    }
-
-    void desligar() {
-   cout << "Desligando motor" << endl;
-    }
-
-    double calcular_consumo(double distancia) {
-        return distancia * consumo_combustivel;
-    }
+    void imprimir(); 
+    void inflar(double nova_pressao);
 };
 
 
-// int main() {
-//     Motor motor;
-//     motor.tipo = "Motor a Gasolina";
-//     motor.potencia = 150.0;
-//     motor.consumo_combustivel = 0.08;  
-//     motor.ligar(); 
 
-//     double distancia = 100.0; //  distaacia em quilometros
-//     double consumo = motor.calcular_consumo(distancia);
-//    cout << "Consumo de combustivel para " << distancia << " km: " << consumo << " litros" << endl;
+int main() {
+    Pneu pneu1;
+    pneu1.largura = 175;        // Largura do pneu em milimetros
+    pneu1.altura = 75;              // Altura do pneu em milimetros
+    pneu1.aro = "20";           // Diâmetro do aro em polegadas
+    pneu1.pressao = 27.0;       // Pressão inicial do pneu em PSI
+    pneu1.tipo = "asfalto";         // Tipo de pneu
 
-//    motor.desligar();
+    pneu1.imprimir(); 
+
     
-//     return 0;
-// }
+    pneu1.inflar(35.0);
+
+    cout << "Apos a inflacao:" << endl << endl;
+    pneu1.imprimir(); 
+
+    return 0;
+}
 
 
+void Pneu::imprimir() { 
+    cout << "Detalhes do Pneu:" << endl;
+    cout << "Largura: " << largura << " mm" << endl;
+    cout << "Altura: " << altura << " mm" << endl;
+    cout << "Diametro do Aro: " << aro << " polegadas" << endl;
+    cout << "Tipo: " << tipo << endl;
+    cout << "Pressão: " << pressao << " PSI" << endl;
+}
 
+void Pneu::inflar(double nova_pressao) { // Implementação do metodo inflar
+    pressao = nova_pressao;
+}

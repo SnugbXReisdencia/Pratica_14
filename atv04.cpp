@@ -1,7 +1,7 @@
 
 
- double divisao(int x, int y){
-    int divisao = x/y;
-    return divisao;
+ double subtracao(int x, int y){
+    int subtracao = x-y;
+    return subtracao;
 }
 
