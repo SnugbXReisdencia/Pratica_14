@@ -33,6 +33,66 @@ bool valida_data(string dta_);
 
 void informacoes_manuntencao(Carro& car);
 
+struct Proprietario{
+    private:
+        string nome;
+        string cnh;
+        string telefone;
+        string email;
+        char sexo;
+        vector<Carro> carros;
+    public:
+        Proprietario();
+        Proprietario(string, string, string, string, char);
+        string getNome();
+        string getCnh();
+        string getTelefone();
+        string getEmail();
+        char getSexo();
+        void adquirirCarro(Carro carro);
+        vector<Carro> getCarros();
+};
+
+Proprietario::Proprietario(){
+
+}
+
+Proprietario::Proprietario(string nome, string cnh, string telefone, string email, char sexo){
+    this->nome = nome;
+    this->cnh = cnh;
+    this->telefone = telefone;
+    this->email = email;
+    this->sexo = sexo;
+}
+
+string Proprietario::getNome(){
+    return this->nome;
+}
+
+string Proprietario::getCnh(){
+    return this->cnh;
+}
+
+string Proprietario::getTelefone(){
+    return this->telefone;
+}
+
+string Proprietario::getEmail(){
+    return this->email;
+}
+
+char Proprietario::getSexo(){
+    return this->sexo;
+}
+
+void Proprietario::adquirirCarro(Carro carro){
+    this->carros.push_back(carro);
+}
+
+vector<Carro> Proprietario::getCarros(){
+    return this->carros;
+}
+
 struct Motor
 {
 private:
